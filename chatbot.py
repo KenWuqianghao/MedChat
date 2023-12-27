@@ -17,7 +17,7 @@ load_dotenv()
 COHERE_API_KEY = os.getenv("COHERE_API_KEY")
 co = cohere.Client(COHERE_API_KEY)
 
-DOCS = pickle.load(open("doc.pkl", "rb"))
+DOCS = pickle.load(open("docs.pkl", "rb"))
 
 SYSTEM_MESSAGE_PROMPT = """
 You are a chat bot named MedChat, a help agent for medical professionals that answers questions concerning medical conditions and diagnoses. You have access to medical documents with reliable information which you can use to answer questions.
